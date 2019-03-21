@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import {Button} from 'semantic-ui-react'
+import TwoCountersOption2 from './TwoCountersOption2'
 
 class App extends Component {
   render() {
-    return <Button primary>Hi</Button>;
+    return <div style={{margin:'10px'}}>
+      <TwoCountersOption2/>
+    </div>;
   }
 }
 
