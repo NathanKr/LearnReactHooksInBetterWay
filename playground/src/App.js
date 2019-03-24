@@ -1,13 +1,11 @@
-import React, { Component } from "react";
-import ShowClickUsingHooks from './ShowClickUsingHooks'
+import React from "react";
+import AlbumsAndComments from './AlbumsAndComments'
 
 
-class App extends Component {
-  render() {
+const  App = ()  => {
     return <div style={{margin:'10px'}}>
-      <ShowClickUsingHooks/>
+      <AlbumsAndComments/>
     </div>;
-  }
 }
 
 export default App;
