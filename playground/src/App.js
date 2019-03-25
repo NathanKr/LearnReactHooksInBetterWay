@@ -1,11 +1,14 @@
-import React from "react";
-import AlbumsAndComments from './AlbumsAndComments'
+import React, { useState } from "react";
+import Clock from "./Clock";
 
+const App = () => {
+  const [showClock, setShowClock] = useState(true);
 
-const  App = ()  => {
-    return <div style={{margin:'10px'}}>
-      <AlbumsAndComments/>
-    </div>;
-}
+  return (
+    <div onClick={() => setShowClock(!showClock)} style={{ margin: "10px" }}>
+      {showClock ? <Clock /> : ''}
+    </div>
+  );
+};
 
 export default App;
