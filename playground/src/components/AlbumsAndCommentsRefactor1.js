@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button } from "semantic-ui-react";
 import Albums1 from "./Albums1";
 import Comments1 from "./Comments1";

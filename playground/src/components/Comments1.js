@@ -1,20 +1,9 @@
-import React , {useState,useEffect} from "react";
-import axios from 'axios'
+import React  from "react";
+import { useFetchResources } from "../customHooks/useFetchResources";
 
 const Comments1 = ({resource}) => {
-  const [resources, setResources] = useState([]);
-  const url = `https://jsonplaceholder.typicode.com/${resource}`;
 
-  const fetchResources = () => {
-    axios
-      .get(url)
-      .then(response => {
-        setResources(response.data);
-      })
-      .catch(err => console.log(err));
-  };
-
-  useEffect(fetchResources, [resource]);
+const resources = useFetchResources(resource);
 
   const elements = (
     <ul>
@@ -26,7 +15,7 @@ const Comments1 = ({resource}) => {
 
   return (
     <div>
-      <h2>comments</h2>
+      <h2>comments !</h2>
       {elements}
     </div>
   );

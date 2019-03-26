@@ -1,20 +1,9 @@
-import React, { useState, useEffect } from "react";
-import axios from 'axios'
+import React from "react";
+import { useFetchResources } from "../customHooks/useFetchResources";
 
 const Albums1 = ({ resource }) => {
-  const [resources, setResources] = useState([]);
-  const url = `https://jsonplaceholder.typicode.com/${resource}`;
 
-  const fetchResources = () => {
-    axios
-      .get(url)
-      .then(response => {
-        setResources(response.data);
-      })
-      .catch(err => console.log(err));
-  };
-
-  useEffect(fetchResources, [resource]);
+  const resources = useFetchResources(resource);
 
   const elements = (
     <ul>
@@ -24,10 +13,12 @@ const Albums1 = ({ resource }) => {
     </ul>
   );
 
-  return (<div>
-      <h2>Albums</h2>
+  return (
+    <div>
+      <h2>Albums ! </h2>
       {elements}
-      </div>);
+    </div>
+  );
 };
 
 export default Albums1;
