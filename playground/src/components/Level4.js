@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Button } from "semantic-ui-react";
-import { LanguageContext } from "./LanguageContext";
+import { LanguageContext } from "../context/LanguageContext";
 
 const Level4 = () => {
   const value = useContext(LanguageContext);

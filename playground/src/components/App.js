@@ -1,10 +1,10 @@
 import React  from "react";
-import CounterIncrementDecrement from './CounterIncrementDecrement'
+import AlbumsAndCommentsRefactor1 from './AlbumsAndCommentsRefactor1'
 
 const App = () => {
   return (
     <div style={{ margin: "10px" }}>
-      <CounterIncrementDecrement initialState={{count:10}}/>
+     <AlbumsAndCommentsRefactor1/>
     </div>
   );
 };

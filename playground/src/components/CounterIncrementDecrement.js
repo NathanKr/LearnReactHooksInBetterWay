@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import { Button } from "semantic-ui-react";
-import counterReducer from './counterReducer'
+import counterReducer from '../reducers/counterReducer'
 
 const CounterIncrementDecrement = ({ initialState }) => {
   const [state, dispatch] = useReducer(counterReducer , initialState);
