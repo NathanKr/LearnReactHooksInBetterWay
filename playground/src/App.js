@@ -1,10 +1,10 @@
-import React from "react";
-import SetIntervalSampleGood from "./SetIntervalSampleGood";
+import React  from "react";
+import CounterIncrementDecrement from './CounterIncrementDecrement'
 
 const App = () => {
   return (
     <div style={{ margin: "10px" }}>
-      <SetIntervalSampleGood />
+      <CounterIncrementDecrement initialState={{count:10}}/>
     </div>
   );
 };
