@@ -1,10 +1,10 @@
 import React  from "react";
-import Parent from './Parent'
+import ParentUseCallback from './ParentUseCallback'
 
 const App = () => {
   return (
     <div style={{ margin: "10px" }}>
-    <Parent/>
+    <ParentUseCallback/>
     </div>
   );
 };
