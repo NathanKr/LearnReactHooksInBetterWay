@@ -1,11 +1,10 @@
 import React  from "react";
-import RulesSample from './RulesSample' 
-
+import Parent from './Parent'
 
 const App = () => {
   return (
     <div style={{ margin: "10px" }}>
-     <RulesSample/>
+    <Parent/>
     </div>
   );
 };
