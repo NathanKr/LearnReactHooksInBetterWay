@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./ChatPanel.css";
 import firebase from "../logic/firebase";
 
 const ChatPanel = () => {
   const [messages, setMessages] = useState([]);
+
+  const refTo_messagesVariable = useRef();
+  refTo_messagesVariable.current = messages;
 
   const messagesRefFirebase = firebase.database().ref("messages");
 
@@ -11,7 +14,8 @@ const ChatPanel = () => {
     console.log("addMessagesListener");
     messagesRefFirebase.on("child_added", snap => {
       console.log(snap.val());
-      const newMessages = [...messages];
+      console.log(refTo_messagesVariable.current);
+      const newMessages = [...refTo_messagesVariable.current];
       newMessages.push(snap.val());
       setMessages(newMessages);
     });
