@@ -1,6 +1,14 @@
 import React from "react";
 import "./SendMessage.css";
 
+/*
+text
+id (of the message , unique id)
+user (some unique id)
+current room (some unique id)
+*/
+
+
 const SendMessage = ({ messagesRefFirebase }) => {
   return (
     <div className="SendMessage">
