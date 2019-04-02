@@ -15,7 +15,7 @@ const ChatApp = () => {
 
   // --- todo use null after room selected logic
   const [currentRoom, setCurrentRoom] = useState({
-    id: "id1",
+    id: "idroom1",
     name: "room1",
     description: "room1 description"
   });
