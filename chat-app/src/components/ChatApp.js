@@ -6,8 +6,19 @@ import CurrentRoomContext from "../context/CurrentRoomContext";
 import UserContext from "../context/UserContext";
 
 const ChatApp = () => {
-  const [user, setUser] = useState(null);
-  const [currentRoom, setCurrentRoom] = useState(null);
+   // --- todo use null after user login
+  const [user, setUser] = useState({
+    displayName: "Nathan",
+    photoURL: "",
+    uid: "id nathan"
+  });
+
+  // --- todo use null after room selected logic
+  const [currentRoom, setCurrentRoom] = useState({
+    id: "id1",
+    name: "room1",
+    description: "room1 description"
+  });
 
   return (
     <div className="ChatApp">
