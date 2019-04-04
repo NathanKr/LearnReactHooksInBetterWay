@@ -51,9 +51,10 @@ const Rooms = () => {
 
   const roomsElements = (
     <ul>
-      {/* todo add onClick after modal exist */}
       {rooms.map((it, index) => (
-        <li key={index}>{it.name}</li>
+        <li onClick={() => setCurrentRoom(rooms[index])} key={index}>
+          {it.name}
+        </li>
       ))}
     </ul>
   );
