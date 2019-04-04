@@ -62,7 +62,7 @@ const Rooms = () => {
   return (
     <div>
       <button onClick={addRoom}>Add Room</button>
-      <p>rooms ({rooms.length})</p>
+      <h4>rooms ({rooms.length})</h4>
       {roomsElements}
       {/* <ul> */}
       {/* <li
