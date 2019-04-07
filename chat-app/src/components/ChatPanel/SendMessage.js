@@ -3,6 +3,7 @@ import "./SendMessage.css";
 import UserContext from "../../context/UserContext";
 import CurrentRoomContext from "../../context/CurrentRoomContext";
 import firebase from '../../logic/firebase'
+import {Button} from 'semantic-ui-react'
 
 /*
 text
@@ -36,7 +37,10 @@ const SendMessage = ({ messagesRefFirebasePerRoomId }) => {
         placeholder="insert message ..."
         value={messageText}
       />
-      <button
+      <Button
+        size='medium'
+        circular
+        icon = 'arrow circle right'
         onClick={() =>
           messagesRefFirebasePerRoomId
             .child(messageId)
@@ -47,9 +51,7 @@ const SendMessage = ({ messagesRefFirebasePerRoomId }) => {
             })
             .catch(err => console.log(`set error : ${err} `))
         }
-      >
-        SendMessage
-      </button>
+      />
     </div>
   );
 };

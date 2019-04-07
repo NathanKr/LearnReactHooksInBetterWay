@@ -1,10 +1,11 @@
 .SendMessage {
   display: flex;
-  /* background-color: #fefefe; */
   padding : 5px;
 }
 
 
 .SendMessage > input{
-    flex-grow: 1
+    flex-grow: 1;
+    padding: 5px;
+    margin-right: 10px;
 }
