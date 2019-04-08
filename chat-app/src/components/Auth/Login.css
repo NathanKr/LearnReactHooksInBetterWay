@@ -6,3 +6,11 @@
   align-items: center;
   justify-content: center;
 }
+
+.Login > div{
+  width:450px;
+}
+
+.Login , .message{
+  text-align: center
+}

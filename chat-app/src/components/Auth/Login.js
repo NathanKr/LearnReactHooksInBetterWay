@@ -1,10 +1,17 @@
-import React , {useState,useContext} from "react";
+import React, { useState, useContext } from "react";
 import UserContext from "../../context/UserContext";
 import firebase from "../../logic/firebase";
 import { appName, appIconName } from "../../logic/constants";
-import { Header, Button, Icon, Form, Segment } from "semantic-ui-react";
-import "./Login.css"
-
+import {
+  Header,
+  Button,
+  Icon,
+  Form,
+  Segment,
+  Message
+} from "semantic-ui-react";
+import "./Login.css";
+import { Link } from "react-router-dom";
 
 const Login = ({ history }) => {
   const { setUser } = useContext(UserContext);
@@ -33,32 +40,37 @@ const Login = ({ history }) => {
 
   return (
     <div className="Login">
-      <Segment stacked>
-        <Header color="black" as="h2">
-          <Icon name={appIconName} /> Login to {appName}
-        </Header>
-        <Form onSubmit={login}>
-          <Form.Input
-            icon="mail"
-            value={email}
-            iconPosition="left"
-            placeholder="E-mail address"
-            type="email"
-            onChange={evt => setEmail(evt.target.value)}
-          />
-          <Form.Input
-            icon="lock"
-            value={password}
-            iconPosition="left"
-            placeholder="Password"
-            type="password"
-            onChange={evt => setPassword(evt.target.value)}
-          />
-           <Button size="large" fluid color="black" type="submit">
-            Login
-          </Button>
-        </Form>
-      </Segment>
+      <div>
+        <Segment stacked>
+          <Header color="black" as="h2">
+            <Icon name={appIconName} /> Login to {appName}
+          </Header>
+          <Form onSubmit={login}>
+            <Form.Input
+              icon="mail"
+              value={email}
+              iconPosition="left"
+              placeholder="E-mail address"
+              type="email"
+              onChange={evt => setEmail(evt.target.value)}
+            />
+            <Form.Input
+              icon="lock"
+              value={password}
+              iconPosition="left"
+              placeholder="Password"
+              type="password"
+              onChange={evt => setPassword(evt.target.value)}
+            />
+            <Button size="large" fluid color="black" type="submit">
+              Login
+            </Button>
+          </Form>
+        </Segment>
+        <Message>
+          New to us ? <Link to="/Register">Register</Link>
+        </Message>
+      </div>
     </div>
   );
 };

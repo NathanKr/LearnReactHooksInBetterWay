@@ -1,6 +1,6 @@
 import React from "react";
 import "./SidePanel.css";
-import User from "./User";
+import User from "./UserMenu";
 import Rooms from "./Rooms";
 import {Header , Icon} from 'semantic-ui-react'
 import {appName , appIconName} from '../../logic/constants'

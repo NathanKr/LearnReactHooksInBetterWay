@@ -30,49 +30,51 @@ const Register = ({ history }) => {
 
   return (
     <div className="Register">
-      <Segment stacked>
-        <Header color="black" as="h2">
-          <Icon name={appIconName} /> Register to {appName}
-        </Header>
-        <Form onSubmit={register}>
-          <Form.Input
-            icon="user"
-            value={displayName}
-            iconPosition="left"
-            placeholder="Display Name"
-            type="text"
-            onChange={evt => setDisplayName(evt.target.value)}
-          />
-          <Form.Input
-            icon="mail"
-            value={email}
-            iconPosition="left"
-            placeholder="E-mail address"
-            type="email"
-            onChange={evt => setEmail(evt.target.value)}
-          />
+      <div>
+        <Segment stacked>
+          <Header color="black" as="h2">
+            <Icon name={appIconName} /> Register to {appName}
+          </Header>
+          <Form onSubmit={register}>
+            <Form.Input
+              icon="user"
+              value={displayName}
+              iconPosition="left"
+              placeholder="Display Name"
+              type="text"
+              onChange={evt => setDisplayName(evt.target.value)}
+            />
+            <Form.Input
+              icon="mail"
+              value={email}
+              iconPosition="left"
+              placeholder="E-mail address"
+              type="email"
+              onChange={evt => setEmail(evt.target.value)}
+            />
 
-          <Form.Input
-            icon="lock"
-            value={password}
-            iconPosition="left"
-            placeholder="Password"
-            type="password"
-            onChange={evt => setPassword(evt.target.value)}
-          />
-          <Form.Input
-            icon="file image"
-            value={photoURL}
-            iconPosition="left"
-            placeholder="Avatar URL"
-            type="url"
-            onChange={evt => setPhotoURL(evt.target.value)}
-          />
-          <Button size="large" fluid color="black" type="submit">
-            Register
-          </Button>
-        </Form>
-      </Segment>
+            <Form.Input
+              icon="lock"
+              value={password}
+              iconPosition="left"
+              placeholder="Password"
+              type="password"
+              onChange={evt => setPassword(evt.target.value)}
+            />
+            <Form.Input
+              icon="file image"
+              value={photoURL}
+              iconPosition="left"
+              placeholder="Avatar URL"
+              type="url"
+              onChange={evt => setPhotoURL(evt.target.value)}
+            />
+            <Button size="large" fluid color="black" type="submit">
+              Register
+            </Button>
+          </Form>
+        </Segment>
+      </div>
     </div>
   );
 };
