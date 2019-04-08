@@ -30,7 +30,6 @@ const Register = ({ history }) => {
 
   return (
     <div className="Register">
-      <div />
       <Segment stacked>
         <Header color="black" as="h2">
           <Icon name={appIconName} /> Register to {appName}
