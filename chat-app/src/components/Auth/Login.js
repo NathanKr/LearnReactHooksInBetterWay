@@ -2,12 +2,13 @@ import React, { useState, useContext, useEffect } from "react";
 import UserContext from "../../context/UserContext";
 import firebase from "../../logic/firebase";
 import { appName, appIconName } from "../../logic/constants";
+import MessageError from './MessageError'
 import {
   Header,
   Button,
   Icon,
   Form,
-  Segment,
+  Segment ,
   Message
 } from "semantic-ui-react";
 import "./Login.css";
@@ -84,7 +85,8 @@ const Login = ({ history }) => {
                 evaluateEmailError(evt.target.value);
               }}
             />
-            {emailError ? <Message negative>{emailError}</Message> : ""}
+            <MessageError error={emailError}/>
+            
             <Form.Input
               icon="lock"
               value={password}
@@ -96,7 +98,7 @@ const Login = ({ history }) => {
                 evaluatePasswordError(evt.target.value);
               }}
             />
-            {passwordError ? <Message negative>{passwordError}</Message> : ""}
+            <MessageError error={passwordError}/>
             <Button
               disabled={!isFormValid}
               size="large"
@@ -106,7 +108,7 @@ const Login = ({ history }) => {
             >
               Login
             </Button>
-            {firebaseError ? <Message negative>{firebaseError}</Message> : ""}
+            <MessageError error={firebaseError}/>
           </Form>
         </Segment>
         <Message>
