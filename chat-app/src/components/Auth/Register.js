@@ -38,7 +38,7 @@ const Register = ({ history }) => {
   };
 
   const evaluateConfirmedPasswordError = (password, conformedPassword) => {
-    if (password.length != conformedPassword.length) {
+    if (password.length !== conformedPassword.length) {
       setConfirmedPasswordError("Conformed password is not matched");
     } else {
       setConfirmedPasswordError("");

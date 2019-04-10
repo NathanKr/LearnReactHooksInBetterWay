@@ -3,10 +3,12 @@ import CurrentRoomContext from "../../context/CurrentRoomContext";
 import firebase from "../../logic/firebase";
 import AddRoomModal from "./AddRoomModal";
 import "./Rooms.css";
-
+import Spinner from '../Common/Spinner'
 const Rooms = () => {
   const { setCurrentRoom } = useContext(CurrentRoomContext);
   const [rooms, setRooms] = useState([]);
+  const [roomsLoaded, setRoomsLoaded] = useState(false);
+
   const roomsRefFirebase = firebase.database().ref("rooms");
 
   const refTo_roomsVariable = useRef();
@@ -20,6 +22,7 @@ const Rooms = () => {
       let newRooms = [...refTo_roomsVariable.current, snap.val()];
       console.log(refTo_roomsVariable.current);
       setRooms(newRooms);
+      setRoomsLoaded(true);
     });
   };
 
@@ -34,7 +37,7 @@ const Rooms = () => {
     return () => removeRoomsListener();
   }, []); // --- mount \ unmount
 
-  const roomsElements = (
+  const roomsElements = roomsLoaded ? (
     <ul>
       {rooms.map((it, index) => (
         <li onClick={() => setCurrentRoom(rooms[index])} key={index}>
@@ -42,7 +45,7 @@ const Rooms = () => {
         </li>
       ))}
     </ul>
-  );
+  ) : <Spinner/>;
 
   return (
     <div className="Rooms">
