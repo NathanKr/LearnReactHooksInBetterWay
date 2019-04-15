@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 
 const Login = ({ history }) => {
   const { setUser } = useContext(UserContext);
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("natankrasney@gmail.com");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");

@@ -5,9 +5,9 @@ const SetIntervalSampleGood = () => {
 
   const counterRef = useRef();
 
-  useEffect(() => {
-    counterRef.current = counter;
-  });
+  // not needed useEffect(() => {
+  counterRef.current = counter;
+  //});
 
   useEffect(() => {
     const handle = setInterval(() => {
