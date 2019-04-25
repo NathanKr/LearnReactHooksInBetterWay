@@ -1,10 +1,10 @@
 import React from 'react';
-import YourName from './YourName'
+import ToggleTextColor from './ToggleTextColor'
 
 function App() {
   return (
     <div>
-     <YourName/>
+     <ToggleTextColor/>
     </div>
   );
 }
