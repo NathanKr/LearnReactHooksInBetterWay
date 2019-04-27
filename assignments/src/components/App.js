@@ -1,10 +1,10 @@
 import React from 'react';
-import UserLoginWithRef from './UserLoginWithRef'
+import SetIntervalSampleWithUseReducer from './SetIntervalSampleWithUseReducer'
 
 function App() {
   return (
     <div>
-     <UserLoginWithRef/>
+     <SetIntervalSampleWithUseReducer/>
     </div>
   );
 }
