@@ -1,10 +1,10 @@
 import React from 'react';
-import SetIntervalSampleWithUseReducer from './SetIntervalSampleWithUseReducer'
+import LocalStorageSample from './LocalStorageSample'
 
 function App() {
   return (
     <div>
-     <SetIntervalSampleWithUseReducer/>
+     <LocalStorageSample/>
     </div>
   );
 }
