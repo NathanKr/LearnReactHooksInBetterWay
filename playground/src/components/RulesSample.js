@@ -3,12 +3,12 @@ import { Button, Input, Dropdown, DropdownItem, Form } from "semantic-ui-react";
 
 const RulesSample = () => {
   const [importance, setImportance] = useState("");
-  useEffect(() => {
-    if (importance === "high") {
+  if (importance === "high") {
+    useEffect(() => {
       console.log(idea);
-    }
   });
-  const [idea, setIdea] = useState("");
+}
+const [idea, setIdea] = useState("");
   const [ideas, setIdeas] = useState([]);
 
   const elements = (
@@ -45,6 +45,7 @@ const RulesSample = () => {
 
   return (
     <div>
+      <h2>choose high will cause hooks error - check console</h2>
       <Form>
         <Form.Field>
           <Dropdown selection text="Select importance">
